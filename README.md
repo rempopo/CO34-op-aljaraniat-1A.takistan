@@ -1,5 +1,5 @@
 ﻿# CO34 Operation Aljaraniat
-Краткое описание миссии
+ВС Такистана возобновляют контроль над границей и уничтожают схроны с ПЗРК
 
 <img src='https://github.com/rempopo/<REPOSITORY_NAME>/raw/master/overview.jpg' />	
 
