@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=528;
+		nextID=535;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=122;
+		nextID=141;
 	};
 	class Camera
 	{
-		pos[]={315.33087,647.45349,11451.848};
-		dir[]={0.51035005,-0.83391571,0.21010071};
-		up[]={0.77112627,0.55189425,0.31745696};
-		aside[]={0.38068578,3.1269155e-007,-0.92471379};
+		pos[]={2249.9578,228.43071,11671.003};
+		dir[]={-0.67578423,-0.73488718,-0.057165071};
+		up[]={-0.73227578,0.67818689,-0.061943967};
+		aside[]={-0.084290631,4.9341907e-008,0.99644649};
 	};
 };
 binarizationWanted=0;
@@ -77,7 +77,6 @@ addons[]=
 	"A3_Props_F_Orange_Humanitarian_Camps",
 	"A3_Structures_F_Furniture",
 	"A3_Structures_F_System",
-	"A3_Weapons_F_Ammoboxes",
 	"A3_Props_F_Enoch_Industrial_Supplies",
 	"A3_Data_F",
 	"CUP_WheeledVehicles_UAZ",
@@ -86,7 +85,8 @@ addons[]=
 	"A3_Structures_F_Civ_Camping",
 	"A3_Structures_F_EPA_Civ_Camping",
 	"A3_Structures_F_Civ_Accessories",
-	"A3_Modules_F_Sites"
+	"A3_Modules_F_Sites",
+	"A3_Weapons_F_Ammoboxes"
 };
 class AddonsMetaData
 {
@@ -380,6 +380,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -425,25 +444,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
 				};
 			};
 		};
@@ -500,7 +500,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=93;
+		items=95;
 		class Item0
 		{
 			dataType="Layer";
@@ -2062,23 +2062,6 @@ class Mission
 				items=3;
 				class Item0
 				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={5944.3184,85.361031,11480.735};
-						angles[]={0,5.5133238,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						description="Falkun-1-1";
-					};
-					id=98;
-					type="CUP_O_UH1H_armed_TKA";
-				};
-				class Item1
-				{
 					dataType="Logic";
 					class PositionInfo
 					{
@@ -2089,7 +2072,7 @@ class Mission
 					type="Logic";
 					atlOffset=1.7178345;
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -2102,9 +2085,68 @@ class Mission
 					type="Logic";
 					atlOffset=-1.5258789e-005;
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5944.3179,85.361031,11480.735};
+						angles[]={0,5.5133209,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						description="Falkun-1-1";
+					};
+					id=530;
+					type="CUP_O_UH1H_TKA";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="[[[[""CUP_arifle_AKS74U"",""FirstAidKit""],[1,4]],[[""CUP_30Rnd_545x39_AK_M"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[10,2,2,2]],[[],[]],[[],[]]],false]";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_fastroping_equipFRIES";
+							expression="[_this] call ace_fastroping_fnc_equipFRIES";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
 			};
 			id=103;
-			atlOffset=12.191765;
+			atlOffset=2.6316757;
 		};
 		class Item5
 		{
@@ -2465,8 +2507,8 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2120.1487,153.51276,11639.939};
-						angles[]={0.11153467,0.38311842,0.039979152};
+						position[]={2181.3633,149.28119,11653.093};
+						angles[]={0.20046888,5.6105552,6.1043191};
 					};
 					name="tSF_FARP";
 					init="tSF_FARP_Composition = ""Taki URAL RFA""";
@@ -2569,14 +2611,14 @@ class Mission
 				};
 			};
 			id=121;
-			atlOffset=-0.52224731;
+			atlOffset=0.2676239;
 		};
 		class Item16
 		{
 			dataType="Marker";
 			position[]={5782.624,83.040001,11409.063};
 			name="marker_0";
-			text="TAF Airbase";
+			text="База ВВС Такистана";
 			type="Faction_CUP_TKA";
 			id=124;
 		};
@@ -2653,38 +2695,42 @@ class Mission
 		class Item23
 		{
 			dataType="Marker";
-			position[]={1366.9363,273.93234,11070.434};
+			position[]={1366.936,273.93201,11070.434};
 			name="marker_10";
-			text="IEDs";
+			text="СВУ";
 			type="hd_warning";
 			id=135;
+			atlOffset=-0.00036621094;
 		};
 		class Item24
 		{
 			dataType="Marker";
-			position[]={1318.7201,397.71368,10549.936};
+			position[]={1318.72,397.71399,10549.936};
 			name="marker_11";
-			text="IEDs";
+			text="СВУ";
 			type="hd_warning";
 			id=136;
+			atlOffset=0.00030517578;
 		};
 		class Item25
 		{
 			dataType="Marker";
-			position[]={783.93762,554.46234,10481.959};
+			position[]={783.93799,554.46198,10481.959};
 			name="marker_12";
-			text="Cache";
+			text="Схрон";
 			type="hd_unknown";
 			id=137;
+			atlOffset=-0.00036621094;
 		};
 		class Item26
 		{
 			dataType="Marker";
-			position[]={278.94208,687.63025,10311.896};
+			position[]={278.94199,687.63,10311.896};
 			name="marker_13";
-			text="Cache";
+			text="Схрон";
 			type="hd_unknown";
 			id=138;
+			atlOffset=-0.00024414063;
 		};
 		class Item27
 		{
@@ -4622,14 +4668,14 @@ class Mission
 			name="Base";
 			class Entities
 			{
-				items=17;
+				items=16;
 				class Item0
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2092.7087,152.64691,11644.403};
-						angles[]={0.16955711,2.3434944,6.2816033};
+						position[]={2094.7327,152.93132,11642.442};
+						angles[]={0.14144853,2.3434944,6.2703824};
 					};
 					side="Empty";
 					flags=4;
@@ -4638,14 +4684,14 @@ class Mission
 					};
 					id=252;
 					type="CUP_TKBasicAmmunitionBox_EP1";
-					atlOffset=-0.0038299561;
+					atlOffset=-0.00032043457;
 				};
 				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2093.9788,152.6611,11644.49};
+						position[]={2095.0588,152.68152,11644.438};
 						angles[]={0.13045351,0.7035498,0.011203959};
 					};
 					side="Empty";
@@ -4655,7 +4701,6 @@ class Mission
 					};
 					id=253;
 					type="CUP_TKBasicAmmunitionBox_EP1";
-					atlOffset=-0.0014038086;
 				};
 				class Item2
 				{
@@ -4876,66 +4921,23 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2090.1621,154.60483,11643.093};
+						position[]={2090.1621,153.71733,11643.093};
 						angles[]={0,3.2798669,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 					};
 					id=254;
 					type="Land_CamoNet_EAST";
-					atlOffset=0.16252136;
+					atlOffset=0.27230835;
 				};
 				class Item14
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2092.4617,153.20496,11642.263};
-						angles[]={0.14144896,3.4847701,6.2816033};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						createAsSimpleObject=1;
-						disableSimulation=1;
-					};
-					id=270;
-					type="IG_supplyCrate_F";
-					atlOffset=-0.00039672852;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ammoBox";
-							expression="[_this,_value] call bis_fnc_initAmmoBox;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item15
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2089.0876,152.09868,11643.741};
+						position[]={2089.1584,152.1107,11643.657};
 						angles[]={0.14144896,5.312603,6.2816033};
 					};
 					side="Empty";
@@ -4945,14 +4947,14 @@ class Mission
 					};
 					id=272;
 					type="Land_WoodenBox_F";
-					atlOffset=-9.1552734e-005;
 				};
-				class Item16
+				class Item15
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2090.5066,152.69998,11642.919};
+						position[]={2090.3457,152.73886,11642.649};
+						angles[]={0.14144896,0,6.2816033};
 					};
 					side="Empty";
 					flags=5;
@@ -4961,11 +4963,10 @@ class Mission
 					};
 					id=271;
 					type="Land_WoodenBox_02_F";
-					atlOffset=-0.0002746582;
 				};
 			};
 			id=269;
-			atlOffset=0.78651428;
+			atlOffset=1.358078;
 		};
 		class Item33
 		{
@@ -5110,7 +5111,7 @@ class Mission
 					};
 					id=321;
 					type="CUP_TKBasicAmmunitionBox_EP1";
-					atlOffset=0.00042724609;
+					atlOffset=0.00061035156;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5832,7 +5833,7 @@ class Mission
 			name="dzn_Gear Layer";
 			class Entities
 			{
-				items=3;
+				items=5;
 				class Item0
 				{
 					dataType="Logic";
@@ -5861,17 +5862,39 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2093.3838,151.66464,11646.885};
-						angles[]={0.13045351,0,0.03838294};
+						position[]={2094.5032,151.80109,11646.018};
+						angles[]={0.13045351,0,0.011203959};
 					};
 					init="this setVariable ['dzn_gear_cargo', 'cargo_kit_tka_cargo'];";
 					id=444;
 					type="Logic";
-					atlOffset=-9.1552734e-005;
+					atlOffset=0.0001373291;
+				};
+				class Item3
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={2093.5105,151.6758,11646.837};
+					};
+					init="this setVariable ['dzn_gear_cargo', 'cargo_kit_tka_engineer'];";
+					id=532;
+					type="Logic";
+				};
+				class Item4
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={5956.3833,83.040001,11493.176};
+					};
+					init="this setVariable ['dzn_gear_cargo', 'cargo_kit_tka_engineer'];";
+					id=533;
+					type="Logic";
 				};
 			};
 			id=442;
-			atlOffset=23.566795;
+			atlOffset=66.675705;
 		};
 		class Item69
 		{
@@ -5987,12 +6010,12 @@ class Mission
 		class Item75
 		{
 			dataType="Marker";
-			position[]={2095.6333,147.78864,11691.661};
+			position[]={2095.6331,147.789,11691.661};
 			name="respawn";
-			text="TAF Operation HQ";
+			text="Штаб операции ВС Такистана";
 			type="Faction_CUP_TKA";
 			id=457;
-			atlOffset=-3.0517578e-005;
+			atlOffset=0.00036621094;
 		};
 		class Item76
 		{
@@ -6146,7 +6169,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={662.07288,602.22809,9598.8389};
-							angle=1.9539754;
+							angle=1.9539748;
 							class Attributes
 							{
 								sizeA=300;
@@ -6391,7 +6414,7 @@ class Mission
 			dataType="Marker";
 			position[]={1128.251,79.676003,13689.504};
 			name="marker_26";
-			text="Ardistan - Takistan Border";
+			text="Граница Адристан - Такистан";
 			type="mil_dot";
 			id=517;
 			atlOffset=3.0517578e-005;
@@ -6638,32 +6661,66 @@ class Mission
 		class Item91
 		{
 			dataType="Marker";
-			position[]={352.43793,323.60693,11739.255};
+			position[]={352.43799,323.60699,11739.255};
 			name="marker_34";
-			text="Ardistan - Takistan Border";
+			text="Граница Адристан - Такистан";
 			type="mil_dot";
 			id=526;
-			atlOffset=-4.4910278;
+			atlOffset=-4.4909668;
 		};
 		class Item92
 		{
 			dataType="Marker";
-			position[]={-634.17651,553.97217,9719.7002};
+			position[]={-634.177,553.97198,9719.7002};
 			name="marker_35";
-			text="Ardistan - Takistan Border";
+			text="Граница Адристан - Такистан";
 			type="mil_dot";
 			id=527;
+			atlOffset=0.00012207031;
+		};
+		class Item93
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2092.772,153.19652,11642.318};
+				angles[]={0.14144896,0,6.2816033};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=531;
+			type="IG_supplyCrate_F";
+			atlOffset=-0.0004119873;
+		};
+		class Item94
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5958.3354,83.932426,11493.7};
+				angles[]={-0,2.310746,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=534;
+			type="IG_supplyCrate_F";
 		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=44;
+			nextID=46;
 		};
 		class Links
 		{
-			items=44;
+			items=46;
 			class Item0
 			{
 				linkID=0;
@@ -6677,7 +6734,7 @@ class Mission
 			class Item1
 			{
 				linkID=1;
-				item0=98;
+				item0=530;
 				item1=102;
 				class CustomData
 				{
@@ -7099,6 +7156,26 @@ class Mission
 				linkID=43;
 				item0=487;
 				item1=479;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item44
+			{
+				linkID=44;
+				item0=531;
+				item1=532;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item45
+			{
+				linkID=45;
+				item0=534;
+				item1=533;
 				class CustomData
 				{
 					type="Sync";

@@ -245,10 +245,6 @@ kit_tka_ab_r =
 	["<BACKPACK ITEMS >> ",[["rhs_100Rnd_762x54mmR", 2]]]
 ];
 
-
-
-
-
 // Cargo
 cargo_kit_tka_vehicle = [
 	[["CUP_arifle_AK74",2],["CUP_launch_RPG18",1]],
@@ -257,10 +253,16 @@ cargo_kit_tka_vehicle = [
 	[["CUP_B_AlicePack_Khaki",4]]
 ];
 
-
 cargo_kit_tka_cargo = [
 	[],
 	[["rhs_100Rnd_762x54mmR",4],["rhs_mag_rgd5",10],["rhs_mag_rdg2_black",10],["CUP_30Rnd_545x39_AK_M",30],["CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M",6],["rhs_VOG25",10],["CUP_10Rnd_762x54_SVD_M",15],["rhs_rpg7_OG7V_mag",3],["rhs_rpg7_PG7VL_mag",3],["SatchelCharge_Remote_Mag",1]],
 	[["ACE_fieldDressing",10],["ACE_packingBandage",10],["ACE_elasticBandage",10],["ACE_tourniquet",4],["rhs_6b27m_ml",2]],
 	[["CUP_B_AlicePack_Khaki",2]]
+];
+
+cargo_kit_tka_engineer = [
+	[],
+	[["rhs_mag_rdg2_black",20]],
+	[["ACE_EntrenchingTool", 30], ["ACE_Sandbag_empty",50]],
+	[]
 ];
