@@ -11,5 +11,5 @@
 # NOT APPROVED
 | Reviewer | Result |
 | ------------ | ------------- |
-| - | - |
+| Кабан | APPROVED |
 | - | - |
