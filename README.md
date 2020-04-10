@@ -12,4 +12,4 @@
 | Reviewer | Result |
 | ------------ | ------------- |
 | Кабан | APPROVED |
-| - | - |
+| lim | APPROVED |
