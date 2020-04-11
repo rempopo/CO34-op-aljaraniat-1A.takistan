@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=141;
+		nextID=179;
 	};
 	class Camera
 	{
-		pos[]={2249.9578,228.43071,11671.003};
-		dir[]={-0.67578423,-0.73488718,-0.057165071};
-		up[]={-0.73227578,0.67818689,-0.061943967};
-		aside[]={-0.084290631,4.9341907e-008,0.99644649};
+		pos[]={2094.2991,158.44221,11683.908};
+		dir[]={-0.86230588,-0.35998419,0.35619041};
+		up[]={-0.33273122,0.93295121,0.13744038};
+		aside[]={0.38178453,9.5169526e-008,0.92426735};
 	};
 };
 binarizationWanted=0;
@@ -921,17 +921,59 @@ class Mission
 							class PositionInfo
 							{
 								position[]={2047.13,146.19528,11682.905};
-								angles[]={0.065506957,0,0.016002094};
+								angles[]={0.065502204,0,0.016004669};
 							};
 							side="East";
 							flags=5;
 							class Attributes
 							{
-								description="Стрелок";
+								description="Стрелок (ГП)";
 								isPlayable=1;
 							};
 							id=68;
 							type="O_Soldier_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Male01PER";
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0.97000003;
+										};
+									};
+								};
+								nAttributes=2;
+							};
 						};
 						class Item8
 						{
@@ -4701,6 +4743,7 @@ class Mission
 					};
 					id=253;
 					type="CUP_TKBasicAmmunitionBox_EP1";
+					atlOffset=0.00010681152;
 				};
 				class Item2
 				{
@@ -6169,7 +6212,7 @@ class Mission
 						{
 							dataType="Trigger";
 							position[]={662.07288,602.22809,9598.8389};
-							angle=1.9539748;
+							angle=1.9539734;
 							class Attributes
 							{
 								sizeA=300;
@@ -6414,7 +6457,7 @@ class Mission
 			dataType="Marker";
 			position[]={1128.251,79.676003,13689.504};
 			name="marker_26";
-			text="Граница Адристан - Такистан";
+			text="Граница Ардистан - Такистан";
 			type="mil_dot";
 			id=517;
 			atlOffset=3.0517578e-005;
@@ -6663,7 +6706,7 @@ class Mission
 			dataType="Marker";
 			position[]={352.43799,323.60699,11739.255};
 			name="marker_34";
-			text="Граница Адристан - Такистан";
+			text="Граница Ардистан - Такистан";
 			type="mil_dot";
 			id=526;
 			atlOffset=-4.4909668;
@@ -6673,7 +6716,7 @@ class Mission
 			dataType="Marker";
 			position[]={-634.177,553.97198,9719.7002};
 			name="marker_35";
-			text="Граница Адристан - Такистан";
+			text="Граница Ардистан - Такистан";
 			type="mil_dot";
 			id=527;
 			atlOffset=0.00012207031;
@@ -6701,7 +6744,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5958.3354,83.932426,11493.7};
-				angles[]={-0,2.310746,0};
+				angles[]={0,2.310746,0};
 			};
 			side="Empty";
 			flags=4;

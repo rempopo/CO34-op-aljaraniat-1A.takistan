@@ -50,9 +50,9 @@ dzn_fnc_interactives_executeEach = {
 		};
 		case "global": {
 			APPLY_CLIENT_CODE(_reference, _code, _persistant);
-			if (!hasInterface) then {
-				APPLY_SEVER_CODE(_reference, _code, _persistant);
-			};
+            if (!hasInterface) then {
+                APPLY_SEVER_CODE(_reference, _code, _persistant);
+            };
 		};
 	};
 } forEach dzn_interactives_objectsAndClasses;

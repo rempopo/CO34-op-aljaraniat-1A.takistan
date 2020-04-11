@@ -6,7 +6,7 @@
 		LOG("Server init started");
 		GVAR(Vehicles) = []; // [@Vehicle, @Name]
 		GVAR(ReturnPoints) = [];
-
+		
 		[] call FUNC(processLogics);
 		publicVariable QGVAR(Vehicles);
 		publicVariable QGVAR(ReturnPoints);
