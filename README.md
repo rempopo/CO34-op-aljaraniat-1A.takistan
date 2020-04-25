@@ -8,7 +8,7 @@
 ### Changelog:
 - Created
 
-# NOT APPROVED
+# APPROVED
 | Reviewer | Result |
 | ------------ | ------------- |
 | Кабан | APPROVED |
